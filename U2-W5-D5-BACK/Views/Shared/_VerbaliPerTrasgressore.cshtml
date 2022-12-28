@@ -1,0 +1,24 @@
+﻿@model IEnumerable<U2_W5_D5_BACK.Models.TotaleTrasgressore>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TotaleVerbali)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Profilo)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotaleVerbali)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Profilo)
+        </td>
+    </tr>
+}
+
+</table>

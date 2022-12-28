@@ -1,0 +1,36 @@
+﻿@model IEnumerable<U2_W5_D5_BACK.Models.Verbale>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DataViolazione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Importo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Decurtamento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Profilo)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataViolazione)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Importo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Decurtamento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Profilo)
+        </td>
+    </tr>
+}
+
+</table>

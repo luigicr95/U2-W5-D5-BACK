@@ -1,0 +1,70 @@
+﻿@model IEnumerable<U2_W5_D5_BACK.Models.Verbale>
+
+@{
+    ViewBag.Title = "ListaVerbali";
+}
+
+<h2>ListaVerbali</h2>
+
+<p>
+    @Html.ActionLink("Aggiungi Verbale", "CreateVerbale")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DataViolazione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IndirizzoViolazione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NominativoAgente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataTrascrizione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Importo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Decurtamento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Violazione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Profilo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataViolazione);
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IndirizzoViolazione)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NominativoAgente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataTrascrizione)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Importo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Decurtamento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Violazione)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Profilo)
+        </td>
+    </tr>
+}
+
+</table>

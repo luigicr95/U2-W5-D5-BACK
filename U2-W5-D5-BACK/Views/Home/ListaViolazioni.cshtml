@@ -1,0 +1,30 @@
+﻿@model IEnumerable<U2_W5_D5_BACK.Models.Violazione>
+
+@{
+    ViewBag.Title = "ListaViolazioni";
+}
+
+<h2>ListaViolazioni</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DescrizioneViolazione)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DescrizioneViolazione)
+                </td>
+            </tr>
+        }
+
+    </table>
+
